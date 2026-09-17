@@ -1,0 +1,17 @@
+{
+  "watch": [
+    "server.js",
+    "app.js",
+    "config",
+    "controllers",
+    "middleware",
+    "models",
+    "routes",
+    "services",
+    "utils",
+    "../.env"
+  ],
+  "ext": "js,json,env",
+  "ignore": ["test/**", "uploads/**"],
+  "delay": "300"
+}

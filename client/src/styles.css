@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+  body {
+    @apply m-0 bg-[#f6f8f7] font-sans text-slate-800 antialiased;
+  }
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-forest-600 focus-visible:ring-offset-2;
+  }
+  button {
+    @apply disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  input,
+  select,
+  textarea {
+    @apply w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-[15px] text-slate-800 placeholder:text-slate-600 transition-colors focus:border-forest-600;
+  }
+  input[type='checkbox'] {
+    @apply h-4 w-4 accent-forest-700;
+  }
+  label {
+    @apply text-[15px] font-medium text-slate-600;
+  }
+  ::selection {
+    @apply bg-forest-100;
+  }
+}
+@layer components {
+  .btn {
+    @apply inline-flex min-h-10 items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-[15px] font-semibold transition;
+  }
+  .btn-primary {
+    @apply btn bg-forest-700 text-white hover:bg-forest-800;
+  }
+  .btn-secondary {
+    @apply btn border border-slate-200 bg-white text-slate-600 hover:bg-slate-50;
+  }
+  .btn-danger {
+    @apply btn bg-red-50 text-red-700 hover:bg-red-100;
+  }
+  .card {
+    @apply rounded-xl border border-slate-200/80 bg-white shadow-card;
+  }
+  .label {
+    @apply mb-1.5 block text-[13px] font-semibold text-slate-600;
+  }
+  .eyebrow {
+    @apply text-[11px] font-bold uppercase tracking-[0.16em] text-slate-500;
+  }
+  .table-head {
+    @apply bg-slate-50/80 text-left text-xs font-semibold uppercase tracking-wider text-slate-500;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

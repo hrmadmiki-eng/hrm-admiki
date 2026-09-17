@@ -1,0 +1,24 @@
+{
+  "name": "admiki-hrms",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n api,web -c cyan,green \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "build": "npm run build --prefix client",
+    "start": "npm start --prefix server",
+    "seed": "npm run seed --prefix server",
+    "test": "npm test --prefix server",
+    "test:browser": "node scripts/browser-smoke.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "@playwright/test": "^1.55.0",
+    "prettier": "^3.6.2"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

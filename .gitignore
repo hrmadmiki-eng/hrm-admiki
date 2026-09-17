@@ -1,0 +1,13 @@
+node_modules/
+client/dist/
+.env
+.env.*
+!.env.example
+coverage/
+artifacts/
+*.log
+server/uploads/
+!server/uploads/.gitkeep
+PROJECT_NOTES.md
+.DS_Store
+.env.example

@@ -1,0 +1,1 @@
+A full-stack HR Management System built with MongoDB, Express.js, React.js, and Node.js, featuring role-based access control, employee management, attendance tracking, leave management, payroll processing, reporting, and an Admin audit trail.
